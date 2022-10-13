@@ -1,0 +1,2 @@
+# ripoff
+Utility library

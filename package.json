@@ -1,19 +1,19 @@
 {
-  "name": "ripoff",
+  "name": "roza",
   "version": "0.0.1",
   "description": "Utility library",
-  "main": "ripoff.js",
+  "main": "roza.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/selfrefactor/ripoff.git"
+    "url": "git+https://github.com/selfrefactor/roza.git"
   },
   "author": "",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/selfrefactor/ripoff/issues"
+    "url": "https://github.com/selfrefactor/roza/issues"
   },
-  "homepage": "https://github.com/selfrefactor/ripoff#readme"
+  "homepage": "https://github.com/selfrefactor/roza#readme"
 }

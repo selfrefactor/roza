@@ -1,0 +1,6 @@
+test typings
+
+try out rameda
+
+use ast tree to extract info from source files. import hell as reference
+

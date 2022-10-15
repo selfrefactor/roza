@@ -15,5 +15,10 @@
   "bugs": {
     "url": "https://github.com/selfrefactor/roza/issues"
   },
-  "homepage": "https://github.com/selfrefactor/roza#readme"
+  "homepage": "https://github.com/selfrefactor/roza#readme",
+  "dependencies": {
+    "jest": "^29.2.0",
+    "rambdax": "^8.1.0",
+    "remeda": "^1.1.0"
+  }
 }

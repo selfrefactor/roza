@@ -1,4 +1,4 @@
-import { pipe } from './pipe'
+import { pipe } from '../src/pipe'
 
 test('happy', () => {
   let result = pipe(1, x => x+1)

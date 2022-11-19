@@ -52,7 +52,7 @@ async function createMethodFile(methodName) {
 async function createTestFile(methodName) {
   const testPath = resolve(
     __dirname,
-    `../../src/${methodName}.spec.ts`
+    `../../tests/${methodName}.spec.ts`
   )
   if(existsSync(testPath)) return
   const content = interpolate(testTemplate, {name: methodName})

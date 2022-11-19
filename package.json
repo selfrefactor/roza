@@ -29,10 +29,10 @@
     "new": "cd scripts && yarn new",
     "==============================SEPARATOR====================================": "",
     "clean": "rm -rf ./dist && mkdir dist",
-		"test": "jest --coverage && yarn run compile",
+		"test": "jest --coverage && yarn compile:test",
 		"test:ci": "jest",
 		"test:typings": "dtslint --localTs ./node_modules/typescript/lib --expectOnly ./typings-test",
-		"compile": "tsc -p ./tsconfig.json --noEmit",
+		"compile:test": "tsc -p ./tsconfig.json --noEmit",
 		"out": "yarn run clean && yarn run build:es && yarn run build:cjs",
 		"build:es": "yarn run tsc --declaration true --declarationMap true --module esnext --outDir ./dist/es",
 		"build:cjs": "yarn run tsc --declaration true --declarationMap true --module commonjs --outDir ./dist/commonjs"
@@ -51,7 +51,7 @@
 		"transform": {
 			".+\\.ts$": "ts-jest"
 		},
-		"testRegex": "/src/.*.spec.ts$",
+		"testRegex": "/tests/.*.spec.ts$",
 		"testPathIgnorePatterns": [
 			"/node_modules/",
 			"/dist/"

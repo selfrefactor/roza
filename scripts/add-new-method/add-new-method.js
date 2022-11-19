@@ -84,7 +84,7 @@ async function attachToExports(methodName) {
 async function addNewMethod(methodName) {
   await createMethodFile(methodName)
   await createTestFile(methodName)
-  await createTypescriptTestFile(methodName)
+  // await createTypescriptTestFile(methodName)
   await attachToExports(methodName)
   log(`${methodName} is created`, 'success')
 }

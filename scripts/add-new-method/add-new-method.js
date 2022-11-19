@@ -16,7 +16,7 @@ export function {{name}}(fn: any) {
 `.trim()
 
 const testTemplate = `
-import { {{name}} } from './{{name}}'
+import { {{name}}, pipe } from '../src/index'
 
 test('happy', () => {
   const result = {{name}}()

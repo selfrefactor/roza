@@ -1,24 +1,28 @@
 {
   "compilerOptions": {
-    "target":
-      "es5" /* Specify ECMAScript target version: 'ES3' (default), 'ES5', 'ES2015', 'ES2016', 'ES2017','ES2018' or 'ESNEXT'. */,
-    "module":
-      "esnext" /* Specify module code generation: 'none', 'commonjs', 'amd', 'system', 'umd', 'es2015', or 'ESNext'. */,
+    "target": "es5",
+    "module": "ES2015",
     "lib": [
       "es6",
       "es2017.object"
     ],
-    "outDir": "./dist" /* Redirect output structure to the directory. */,
+    "outDir": "./dist",
     "noEmit": false,
     "declaration": false,
     "declarationMap": false,
-    "strict": true /* Enable all strict type-checking options. */,
-    "strictNullChecks": true /* Enable strict null checks. */,
-    "noUnusedParameters": false /* Report errors on unused parameters. */,
-    "noFallthroughCasesInSwitch": true /* Report errors for fallthrough cases in switch statement. */,
+    "strict": true,
+    "strictNullChecks": true,
+    "noUnusedParameters": false,
+    "noFallthroughCasesInSwitch": true,
+    "moduleResolution": "node",
     "esModuleInterop": true,
     "skipLibCheck": true
   },
-  "include": ["src", "tests"],
-  "exclude": ["node_modules"]
+  "include": [
+    "src",
+    "tests"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
 }

@@ -1,3 +1,7 @@
+## Typings test
+
+Seems like `yarn out` is required before running tests
+
 ## Release steps - short version
 
 1. `yarn out`

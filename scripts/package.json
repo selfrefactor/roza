@@ -1,7 +1,7 @@
 {
   "name": "roza-scripts",
   "scripts": {
-    "new": "node scripts/add-new-method/add-new-method.js"
+    "new": "node ./add-new-method/add-new-method.js"
   },
   "version": "0.0.0",
   "devDependencies": {

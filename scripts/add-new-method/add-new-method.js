@@ -1,6 +1,6 @@
 const {camelCase} = require('string-fn')
 const {existsSync} = require('fs')
-const {interpolate, replace} = require('rambdax')
+const {interpolate} = require('rambdax')
 const {log} = require('helpers-fn')
 const {readFile, outputFile} = require('fs-extra')
 const {resolve} = require('path')
@@ -44,7 +44,7 @@ async function createMethodFile(methodName) {
     __dirname,
     `../../src/${methodName}.ts`
   )
-  return
+  if(existsSync(methodPath)) return
   const content = interpolate(methodTemplate, {name: methodName})
   await outputFile(methodPath, content)
 }
@@ -54,8 +54,7 @@ async function createTestFile(methodName) {
     __dirname,
     `../../src/${methodName}.spec.ts`
   )
-  console.log(testPath, `testPath`)
-  return
+  if(existsSync(testPath)) return
   const content = interpolate(testTemplate, {name: methodName})
 
   await outputFile(testPath, content)
@@ -66,15 +65,27 @@ async function createTypescriptTestFile(methodName) {
     __dirname,
     `../../typings-test/${methodName}-spec.ts`
   )
-  console.log(typescriptTestPath, `typescriptTestPath`)
-  // const content = interpolate(typescriptTestTemplate, {name: methodName})
-  // await outputFile(typescriptTestPath, content)
+  if(existsSync(typescriptTestPath)) return
+  const content = interpolate(typescriptTestTemplate, {name: methodName})
+  await outputFile(typescriptTestPath, content)
+}
+
+async function attachToExports(methodName) {
+  const exportsPath = resolve(
+    __dirname,
+    `../../src/index.ts`
+  )
+  const content = (await readFile(exportsPath)).toString()
+  const exportStatement = `export * from './${methodName}';`
+  if(content.includes(exportStatement)) return
+  await outputFile(exportsPath, `${exportStatement}\n` + content)
 }
 
 async function addNewMethod(methodName) {
   await createMethodFile(methodName)
   await createTestFile(methodName)
   await createTypescriptTestFile(methodName)
+  await attachToExports(methodName)
   log(`${methodName} is created`, 'success')
 }
 

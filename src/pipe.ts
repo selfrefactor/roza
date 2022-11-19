@@ -50,9 +50,6 @@ export function pipe<A, B, C, D, E, F, G, H> (
   op7: (input: G) => H
 ): H;
 
-/**
- * Perform left-to-right function composition.
- */
 export function pipe (input: any, ...operations: ((x: any) => any)[]): any{
   if (operations.length === 0)
     throw new Error('pipe requires at least one argument');

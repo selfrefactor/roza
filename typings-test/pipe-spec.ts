@@ -1,4 +1,4 @@
-import {pipe} from 'roza'
+import {pipe, map} from 'roza'
 import * as R from 'rambda'
 
 describe('R.pipe', () => {

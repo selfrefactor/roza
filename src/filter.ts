@@ -1,4 +1,4 @@
-import { Predicate } from "./_typings";
+import { Predicate } from "./_typings"
 
 export function filter<T, S extends T> (
   fn: (input: T) => input is S

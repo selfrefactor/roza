@@ -16,6 +16,9 @@
     "noFallthroughCasesInSwitch": true,
     "moduleResolution": "node",
     "esModuleInterop": true,
+    "paths": {
+      "remeda": ["./node_modules/remeda"],
+    },
     "skipLibCheck": true
   },
   "include": [

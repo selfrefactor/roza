@@ -4,7 +4,7 @@
     "lib": ["es2015", "dom"],
     "module": "esnext",
     "noEmit": true,
-    "noImplicitAny": true,
+    "noImplicitAny": false,
     "noImplicitThis": true,
     "noUnusedLocals": true,
     "skipLibCheck": true,

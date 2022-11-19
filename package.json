@@ -26,6 +26,8 @@
 		"typescript": "4.9.3"
 	},
 	"scripts": {
+    "new": "cd scripts && yarn new",
+    "==============================SEPARATOR====================================": "",
     "clean": "rm -rf ./dist && mkdir dist",
 		"test": "jest --coverage && yarn run compile",
 		"test:ci": "jest",

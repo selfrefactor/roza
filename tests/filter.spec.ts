@@ -1,7 +1,8 @@
 import { filter } from '../src/filter'
+import { objectList } from './mocks'
 
 test('with object list', () => {
-  expect(1).toEqual(1)
-  // const result = filter()
-  // console.log(result)
+  // $ExpectType unknown[]
+  const result = filter(Boolean)(objectList)
+  console.log(result)
 })

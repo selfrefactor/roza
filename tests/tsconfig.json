@@ -11,6 +11,6 @@
     "strictFunctionTypes": true,
     "strictNullChecks": true,
     "target": "es2015",
-    "paths": { "roza": ["../dist/commonjs/index.d.ts"], "rambda": ["../node_modules/rambda/index.d.ts"] }
+    "paths": { "roza": ["../dist/commonjs/index.d.ts"] }
   } 
 }    

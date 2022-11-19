@@ -1,2 +1,3 @@
-# ripoff
+# Roza
+
 Utility library

@@ -33,6 +33,7 @@
 		"test:ci": "jest --coverage && yarn compile:test",
 		"test": "jest && yarn test:typings",
 		"test:dev": "jest --watch",
+		"dev": "jest --watch",
 		"test:typings": "dtslint --localTs ./node_modules/typescript/lib --expectOnly ./tests",
 		"==============================SEPARATOR-BUILD====================================": "",
 		"compile:test": "tsc -p ./tsconfig.jest.json --noEmit",

@@ -1,5 +1,5 @@
 import { numbers, numbersAsConst } from './mocks'
-import { mapObject, pipe } from '../src/index'
+import { mapObject, pipe } from '../src/_internals/index'
 
 const double = (x: number) => x * 2
 

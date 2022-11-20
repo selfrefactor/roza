@@ -1,4 +1,4 @@
-import { PartialRecord } from "./_typings";
+import { PartialRecord } from "./_internals/typings";
 
 export function mapObject<T, TResult, TKey extends string>(
   fn: (value: T, key: TKey, obj: Record<TKey, T>) => TResult,

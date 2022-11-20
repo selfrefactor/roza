@@ -1,4 +1,4 @@
-import { filter, pipe } from '../src/index'
+import { filter, pipe } from '../src/_internals/index'
 import { objectList, Foo, FooStrict } from './mocks'
 
 test('with explicit type', () => {

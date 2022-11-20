@@ -1,13 +1,14 @@
 import {numbersOrStringsObject } from './mocks'
 import { isNumber, isString } from './testHelpers'
-import { filterObjectByProperty, pipe } from '../src/index'
+import { filterObjectByProperty, pipe } from '../src/_internals/index'
 
 test('with pipe object - is number', () => {
   // $ExpectType PartialRecord<string, number>
-  pipe(
+  const result =pipe(
     numbersOrStringsObject,
     filterObjectByProperty(isNumber)
   )
+  expect(result).toEqual({ a: 1 })
 })
 
 test('with pipe object - is string', () => {
@@ -18,4 +19,10 @@ test('with pipe object - is string', () => {
   )
   // $ExpectType string | undefined
   result.aa
+})
+
+test('predicate is only one input', () => {
+  (filterObjectByProperty as any)((x: any, value: any) => {
+    expect(value).toBeUndefined()
+  })(numbersOrStringsObject)
 })

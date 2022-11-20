@@ -1,4 +1,4 @@
-import { Predicate } from "./_typings";
+import { Predicate } from "./_internals/typings";
 
 export function all<T>(predicate: Predicate<T>): (list: T[]) => boolean;
 

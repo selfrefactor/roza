@@ -1,4 +1,4 @@
-import { map, pipe } from '../src/index'
+import { map, pipe } from '../src/_internals/index'
 import { objectList, Foo, identity, Bar } from './mocks'
 
 test('without explicit type', () => {

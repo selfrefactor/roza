@@ -60,20 +60,10 @@ async function createTestFile(methodName) {
   await outputFile(testPath, content)
 }
 
-async function createTypescriptTestFile(methodName) {
-  const typescriptTestPath = resolve(
-    __dirname,
-    `../../typings-test/${methodName}-spec.ts`
-  )
-  if(existsSync(typescriptTestPath)) return
-  const content = interpolate(typescriptTestTemplate, {name: methodName})
-  await outputFile(typescriptTestPath, content)
-}
-
 async function attachToExports(methodName) {
   const exportsPath = resolve(
     __dirname,
-    `../../src/index.ts`
+    `../../src/internals/index.ts`
   )
   const content = (await readFile(exportsPath)).toString()
   const exportStatement = `export * from './${methodName}';`
@@ -84,7 +74,6 @@ async function attachToExports(methodName) {
 async function addNewMethod(methodName) {
   await createMethodFile(methodName)
   await createTestFile(methodName)
-  // await createTypescriptTestFile(methodName)
   await attachToExports(methodName)
   log(`${methodName} is created`, 'success')
 }

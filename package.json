@@ -2,9 +2,9 @@
 	"name": "roza",
 	"version": "0.0.2",
 	"description": "Utility library",
-	"main": "dist/commonjs/index.js",
-	"module": "dist/es/index.js",
-	"jsnext:main": "dist/es/index.js",
+	"main": "dist/commonjs/internals/index.js",
+	"module": "dist/es/internals/index.js",
+	"jsnext:main": "dist/es/internals/index.js",
 	"sideEffects": false,
 	"repository": {
 		"type": "git",

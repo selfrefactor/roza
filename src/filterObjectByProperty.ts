@@ -1,20 +1,12 @@
-import { PartialRecord } from "./_typings";
+import { filterObjectBy } from "./_internals/internals";
+import { PartialRecord } from "./_internals/typings";
 
-export function filterObjectByProperty<T, TResult extends T, TKey extends string> (fn: (input: T) => input is TResult ): (obj: Record<TKey, T>) => PartialRecord<TKey, TResult>;
+export function filterObjectByProperty<T, TResult extends T, TKey extends string> (fn: (property: TKey) => boolean ): (obj: Record<TKey, T>) => PartialRecord<TKey, TResult>;
+export function filterObjectByProperty<T, TResult extends T, TKey extends string, TResultKey extends string> (fn: (property: TKey) => boolean ): (obj: Record<TKey, T>) => PartialRecord<TKey, TResult>;
 
 export function filterObjectByProperty(predicate: any){
   return (iterable: any) => {
-    const willReturn:any = {}
-
-    for (const prop in iterable){
-      if (predicate(
-        prop
-      )){
-        willReturn[ prop ] = iterable[ prop ]
-      }
-    }
-  
-    return willReturn
+    return filterObjectBy((property: any) => predicate(property), iterable)
   }
 }
 

@@ -1,9 +1,3 @@
-test typings
-
-try out rameda
-
 use ast tree to extract info from source files. import hell as reference
 
-automate release of both rambda and rambdax
-
-export to Deno with egg.json
+handle async as well - https://github.com/RobinMalfait/lazy-collections/blob/main/src/filter.ts

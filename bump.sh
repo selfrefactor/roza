@@ -1,1 +1,1 @@
-run d chore@prepublish&&run publish patch&&run d chore: after publish
+run d chore@prepublish&&run bump patch&&run d chore: after publish

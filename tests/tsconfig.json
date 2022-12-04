@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "lib": ["es2015", "dom"],
+    "module": "esnext",
+    "noEmit": true,
+    "noImplicitAny": false,
+    "noImplicitThis": true,
+    "noUnusedLocals": true,
+    "skipLibCheck": true,
+    "strictFunctionTypes": true,
+    "strictNullChecks": true,
+    "target": "es2015",
+    "paths": { "roza": ["../dist/commonjs/index.d.ts"], "rambda": ["../node_modules/rambda/index.d.ts"], "remeda": ["../node_modules/remeda/es/index.d.ts"] }
+  } 
+}    

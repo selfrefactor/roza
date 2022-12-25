@@ -1,9 +1,15 @@
 import { filter, pipe } from '../src/_internals/index'
 import { objectList, Foo, FooStrict } from './mocks'
 
+test('reason to stop project', () => {
+  const result = filter(Boolean)([1,2,3])
+  // $ExpectType number[]
+  console.log(result)
+})
+
 test('with explicit type', () => {
   // $ExpectType Foo[]
-  const result = filter<Foo>(Boolean)(objectList)
+  const result = filter(Boolean)(objectList)
   console.log(result)
 })
 

@@ -1,10 +1,10 @@
 import { Predicate } from "./_internals/typings"
 
-export function filter<T, S extends T> (
-  fn: (input: T) => input is S
-): (array: T[]) => S[];
-export function filter<T> (fn: Predicate<T>): (array: T[]) => T[];
+export function filter(fn: Predicate<any>): <T>(array: T[]) => T[];
 
-export function filter<T> (fn: Predicate<T>){
-  return (list: T[]) => list.filter(fn);
+/**
+ * Using any as TS cannot deal with simple `filter(Boolean)([1,2,3])`
+ */
+export function filter(fn: Predicate<any>){
+  return <T>(list: T[]) => list.filter(fn);
 }

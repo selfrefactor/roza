@@ -1,12 +1,12 @@
 import {numbersOrStringsObject } from './mocks'
-import { isNumber, isString } from './testHelpers'
+import { isString } from './testHelpers'
 import { filterObjectByProperty, pipe } from '../src/_internals/index'
 
 test('with pipe object - is number', () => {
   // $ExpectType PartialRecord<string, number>
   const result =pipe(
     numbersOrStringsObject,
-    filterObjectByProperty(isNumber)
+    filterObjectByProperty(x => x === 'a')
   )
   expect(result).toEqual({ a: 1 })
 })

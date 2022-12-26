@@ -18,6 +18,7 @@
     "esModuleInterop": true,
     "paths": {
       "remeda": ["./node_modules/remeda"],
+      "fp-ts": ["./node_modules/fp-ts"],
     },
     "skipLibCheck": true
   },

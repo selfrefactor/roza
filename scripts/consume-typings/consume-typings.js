@@ -1,6 +1,10 @@
 "use strict";
 exports.__esModule = true;
 var remeda_1 = require("remeda");
+var function_1 = require("fp-ts/function");
+var FRecord = require("fp-ts/Record");
 var mocks_1 = require("../../tests/mocks");
-var a = (0, remeda_1.filter)(Boolean)(mocks_1.objectList);
+var a = (0, remeda_1.filter)(function (x) { return true; })(mocks_1.objectList);
 console.log(a);
+var aa = (0, function_1.pipe)({ k1: 1, k2: 2 }, FRecord.filter(function (x) { return x > 1; }));
+console.log(aa);

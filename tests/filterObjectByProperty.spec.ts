@@ -1,4 +1,4 @@
-import {numbersOrStringsObject } from './mocks'
+import {numbersOrStringsObject } from './mocks/mocks'
 import { isString } from './testHelpers'
 import { filterObjectByProperty, pipe } from '../src/_internals/index'
 

@@ -11,3 +11,5 @@ export function filterObjectBy(predicate: any, iterable: any){
   
     return willReturn
 }
+
+export const has = Object.prototype.hasOwnProperty

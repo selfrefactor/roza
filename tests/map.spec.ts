@@ -1,5 +1,5 @@
 import { map, pipe } from '../src/_internals/index'
-import { objectList, Foo, identity, Bar } from './mocks'
+import { objectList, Foo, identity, Bar } from './mocks/mocks'
 
 test('without explicit type', () => {
   // $ExpectType Foo[]

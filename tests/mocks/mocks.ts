@@ -22,7 +22,7 @@ export const numbersObject: Numbers = {
   a:1,
   b:2
 }
-export const numbersOrStringsObject: NumbersOrStrings = {
+export const numbersOrStringsObject = {
   a:1,
   b:'foo'
 }

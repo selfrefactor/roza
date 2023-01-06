@@ -1,5 +1,5 @@
 import { filter, pipe } from '../src/_internals/index'
-import { objectList, Foo, FooStrict } from './mocks/mocks'
+import { objectList, Foo, FooStrict } from '../tests/mocks/mocks'
 
 test('reason to stop project', () => {
   const result = filter(Boolean)([1,2,3])

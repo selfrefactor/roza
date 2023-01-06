@@ -1,6 +1,6 @@
 {
 	"name": "roza",
-	"version": "0.0.2",
+	"version": "0.0.3",
 	"description": "Utility library",
 	"main": "dist/commonjs/internals/index.js",
 	"module": "dist/es/internals/index.js",

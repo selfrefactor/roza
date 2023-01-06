@@ -1,4 +1,4 @@
-import { Predicate } from "./_internals/typings"
+import { Predicate } from "../src/_internals/typings"
 
 export function filter(fn: Predicate<any>): <T>(array: T[]) => T[];
 

@@ -6,15 +6,30 @@ const obj = {
   c:3,
 }
 
+test('without pipe - passing type in library method', () => {
+  const result = filterObject<number>((x) => {
+      x // $ExpectType number
+      return x <3
+    })(obj)
+  expect(result).toEqual({ a: 1, b: 2 })
+})
+
+test('without pipe - passing type in function', () => {
+  const result = filterObject((x: number) => {
+      x // $ExpectType number
+      return x <3
+    })(obj)
+  expect(result).toEqual({ a: 1, b: 2 })
+})
+
 test('with pipe', () => {
   const result = pipe(
     obj,
-    filterObject<number>((x) => {
+    filterObject((x) => {
       x // $ExpectType number
       return x <3
     }),
   )
-  result.a
   expect(result).toEqual({ a: 1, b: 2 })
 })
 

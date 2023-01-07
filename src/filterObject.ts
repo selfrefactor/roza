@@ -1,18 +1,7 @@
-import { Predicate } from "./_internals/typings";
+import {filterWithIndex} from './_internals/internals'
+import {Predicate} from './_internals/typings'
 
-export const filterObject = <A>(predicate: Predicate<A>): ((obj: Record<string, A>) => Record<string, A>) => {
-  return (obj) => {
-    const out: Record<string, A> = {}
-    let changed = false
-    for (const key in obj) {
-        const a = obj[key]
-        if (predicate(a)) {
-          out[key] = a
-        } else {
-          changed = true
-        }
-    }
-    return changed ? out : obj
-  }
-}
-
+export const filterObject = <A>(
+  predicate: Predicate<A>
+): ((obj: Record<string, A>) => Record<string, A>) =>
+  filterWithIndex((_, a) => predicate(a))
